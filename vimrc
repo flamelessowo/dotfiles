@@ -5,5 +5,8 @@ syntax on
 colorscheme slate
 set autoindent
 set noexpandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set backspace=indent,eol,start 
+set clipboard=unnamed
+set noswapfile

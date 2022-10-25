@@ -81,6 +81,9 @@ source /Users/christianbachynskyi/.bash_profile
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+function mark { pandoc "$1" | lynx -stdin; }
+function chmox { chmod +x "$1" }
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
