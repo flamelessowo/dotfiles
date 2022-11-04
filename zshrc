@@ -83,6 +83,8 @@ source /Users/christianbachynskyi/.bash_profile
 
 function mark { pandoc "$1" | lynx -stdin; }
 function chmox { chmod +x "$1" }
+function path { echo -e ${PATH//:/\\n} }
+function glit { lynx "https://www.google.com/search?q="$@"" }
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
