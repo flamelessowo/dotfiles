@@ -7,6 +7,8 @@ Plug 'vim-scripts/auto-pairs-gentle'
 
 call plug#end()
 
+let g:ale_completion_enabled = 1
+
 set nocompatible "turn off vi compatibility mode
 set number "turn on line numbers 
 map <Enter> o<ESC>
@@ -14,7 +16,7 @@ map <S-Enter> O<ESC>
 syntax on
 colorscheme slate
 set autoindent
-set noexpandtab
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set backspace=indent,eol,start 

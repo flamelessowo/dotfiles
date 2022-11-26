@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 eval $(/opt/homebrew/bin/brew shellenv)
-ZSH_THEME=robbyrussell
+ZSH_THEME=awesomepanda
 if [ "$TMUX" = "" ]; then tmux; fi
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -84,7 +84,9 @@ source /Users/christianbachynskyi/.bash_profile
 function mark { pandoc "$1" | lynx -stdin; }
 function chmox { chmod +x "$1" }
 function path { echo -e ${PATH//:/\\n} }
-function glit { lynx "https://www.google.com/search?q="$@"" }
+function glit { args="$@"; lynx "https://www.google.com/search?q=$args" }
+function duckit { args="$@"; lynx "https://duckduckgo.com/?q=$args" }
+function gcco { gcc "$1" -o "$2"}
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

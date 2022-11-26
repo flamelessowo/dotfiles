@@ -38,5 +38,6 @@ yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^TeamViewer" manage=off
 yabai -m rule --add app="^Spotify" manage=off
+yabai -m rule --add app="^Microsoft Teams" manage=off
 
 echo "yabai configuration loaded.."
