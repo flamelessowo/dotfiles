@@ -84,9 +84,12 @@ source /Users/christianbachynskyi/.bash_profile
 function mark { pandoc "$1" | lynx -stdin; }
 function chmox { chmod +x "$1" }
 function path { echo -e ${PATH//:/\\n} }
+# Browser specific
 function glit { args="$@"; lynx "https://www.google.com/search?q=$args" }
 function duckit { args="$@"; lynx "https://duckduckgo.com/?q=$args" }
+# C specific
 function gcco { gcc "$1" -o "$2"}
+function gccor { gcc "$1" -o "$2" && ./"$2" }
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

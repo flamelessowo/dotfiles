@@ -4,10 +4,13 @@ Plug 'sheerun/vim-polyglot' "bottom status line
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'vim-scripts/auto-pairs-gentle'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
 let g:ale_completion_enabled = 1
+nmap <F8> :NERDTreeToggle <CR>
 
 set nocompatible "turn off vi compatibility mode
 set number "turn on line numbers 
