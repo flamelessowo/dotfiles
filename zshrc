@@ -81,6 +81,7 @@ source /Users/christianbachynskyi/.bash_profile
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+#General
 function mark { pandoc "$1" | lynx -stdin; }
 function chmox { chmod +x "$1" }
 function path { echo -e ${PATH//:/\\n} }
@@ -90,6 +91,17 @@ function duckit { args="$@"; lynx "https://duckduckgo.com/?q=$args" }
 # C specific
 function gcco { gcc "$1" -o "$2"}
 function gccor { gcc "$1" -o "$2" && ./"$2" }
+# Vim specific
+function nvitouch { touch "$1" && nvi "$1" }
+function flaskto { cd $(find ~/flamelessowo -type d -name "$1") }
+function flaskinto {
+  FILE=$(find ~/flamelessowo -type f -name "$1")
+  if [[ -e $FILE ]]; then
+    nvi $FILE
+  else
+    echo "Couldn't find file"
+  fi
+}
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

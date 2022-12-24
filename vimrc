@@ -1,19 +1,18 @@
 call plug#begin()
-
 Plug 'sheerun/vim-polyglot' "bottom status line
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'vim-scripts/auto-pairs-gentle'
 Plug 'ervandew/supertab'
-Plug 'scrooloose/nerdtree'
-
+Plug 'scrooloose/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
-
-let g:ale_completion_enabled = 1
+" Nerdtree
+" Ale + Autocompletion
+let g:ale_completion_enabled = 0 
 nmap <F8> :NERDTreeToggle <CR>
 
 set nocompatible "turn off vi compatibility mode
-set number "turn on line numbers 
 map <Enter> o<ESC>
 map <S-Enter> O<ESC>
 syntax on
@@ -30,7 +29,20 @@ set cursorline
 set laststatus=2
 set smarttab
 set hlsearch
+set ignorecase
 set incsearch
 set linebreak
 set belloff=all
 set mouse=a
+set scrolloff=8
+
+" Numbers
+set number "turn on line numbers 
+set relativenumber
+set numberwidth=5
+
+" Custom icons for inv stuff
+set listchars=tab:▸\ 
+set listchars+=trail:·
+set listchars+=eol:↴
+set listchars+=nbsp:_
