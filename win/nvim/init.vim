@@ -13,16 +13,29 @@ Plug 'hrsh7th/cmp-path'         " Optional
 Plug 'saadparwaiz1/cmp_luasnip' " Optional
 Plug 'hrsh7th/cmp-nvim-lua'     " Optional
 
-"  Snippets
+" Snippets
 Plug 'L3MON4D3/LuaSnip'             " Required
 Plug 'rafamadriz/friendly-snippets' " Optional
 
+" LSP's
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
+" Theme
 Plug 'EdenEast/nightfox.nvim'
 
-Plug 'nvim-tree/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
+" Tabs (don't need rn)
+"Plug 'nvim-tree/nvim-web-devicons'
+"Plug 'romgrk/barbar.nvim'
+
+" FZF
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+
+" Undo Tree
+Plug 'mbbill/undotree'
+
+" Multicursor
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 call plug#end()
 
