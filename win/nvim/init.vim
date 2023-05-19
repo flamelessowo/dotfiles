@@ -23,10 +23,6 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 " Theme
 Plug 'EdenEast/nightfox.nvim'
 
-" Tabs (don't need rn)
-"Plug 'nvim-tree/nvim-web-devicons'
-"Plug 'romgrk/barbar.nvim'
-
 " FZF
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
@@ -34,8 +30,12 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 " Undo Tree
 Plug 'mbbill/undotree'
 
-" Multicursor
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+" Buffer tabs
+Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
+" THE MOST USEFUL PLUGIN
+Plug 'eandrju/cellular-automaton.nvim'
 
 call plug#end()
 
@@ -46,6 +46,7 @@ set nocompatible "turn off vi compatibility mode
 syntax on
 colorscheme carbonfox " nightfox.nvim
 set autoindent
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set clipboard=unnamed
