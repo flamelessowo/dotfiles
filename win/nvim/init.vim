@@ -43,10 +43,12 @@ call plug#end()
 :let &shell = '"C:\WINDOWS\system32\cmd.exe"'
 
 set nocompatible "turn off vi compatibility mode
+filetype plugin indent on
 syntax on
 colorscheme carbonfox " nightfox.nvim
 set autoindent
 set smartindent
+set cindent
 set tabstop=4
 set shiftwidth=4
 set clipboard=unnamed
@@ -67,3 +69,18 @@ set scrolloff=8
 set number "turn on line numbers
 set relativenumber
 set numberwidth=5
+
+" Recognize file identations
+
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType vue setlocal shiftwidth=2 softtabstop=2 expandtab
+
+" Remaps
+" For moving lines up and down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
