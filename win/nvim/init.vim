@@ -37,7 +37,17 @@ Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 " THE MOST USEFUL PLUGIN
 Plug 'eandrju/cellular-automaton.nvim'
 
+" Status Line
+Plug 'nvim-lualine/lualine.nvim'
+
+" I really need to replace netrw on windows :(
+Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+
 call plug#end()
+
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 
 " Win + git bash only
 :let &shell = '"C:\WINDOWS\system32\cmd.exe"'
@@ -73,6 +83,7 @@ set numberwidth=5
 " Recognize file identations
 
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType typescript setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType vue setlocal shiftwidth=2 softtabstop=2 expandtab
 
